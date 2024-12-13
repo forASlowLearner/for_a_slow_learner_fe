@@ -26,9 +26,9 @@ export default function Typography({title, type}: Props) {
         } else if(type === 'small1'){
             return <div className='text-[15px] font-medium'>{title}</div>
         } else if(type === 'small2'){
-            return <div className='text-[15px] font-medium'>{title}</div>
+            return <div className='text-[15px] font-medium text-[#646464]'>{title}</div>
         } else if(type === 'small3'){
-            return <div className='text-[13px] font-regular'>{title}</div>
+            return <div className='text-[13px] font-regular text-[#646464]'>{title}</div>
         } 
         
     }
