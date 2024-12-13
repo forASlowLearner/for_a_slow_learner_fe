@@ -14,6 +14,7 @@ function Ranking({ }: Props) {
                 </div>
                 <div className='bg-[white]'>
                     <RankingID/>
+                 
                 </div>
             </div>
         </>
