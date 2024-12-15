@@ -1,9 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Modal from './components/common/Modal';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Rank from './pages/Rank';
+import InfoQuestion from './pages/InfoQuestion';
+import PreTestQuestion from './pages/PreTestQuestion';
+import Quiz from './pages/Quiz';
 
 function App() {
     return (
@@ -12,6 +14,9 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/rank" element={<Rank />} />
+                <Route path="/register-questions" element={<InfoQuestion />} />
+                <Route path="/quiz" element={<Quiz />} />
+                <Route path="/pre-test" element={<PreTestQuestion />} />
             </Routes>
         </>
     );
