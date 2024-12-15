@@ -4,6 +4,8 @@ import Modal from './components/common/Modal';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Rank from './pages/Rank';
+import BookMark from './pages/BookMark';
+
 
 function App() {
     return (
@@ -12,6 +14,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/rank" element={<Rank />} />
+                <Route path="/bookmark" element={<BookMark/>} />
             </Routes>
         </>
     );
