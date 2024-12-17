@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Button from "./../components/common/Button";
 import Input from "./../components/common/Input";
-
+import MainLogo from "./../assets/images/mainTurtleLogo.png";
 function Login() {
   const [inputValue, setInputValue] = useState("");
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -10,26 +10,18 @@ function Login() {
   };
   return (
     <div>
-      <h1>Welcome to the Login Page</h1>
-      <p>This is the login page of the application.</p>
-      <Input
-        type="text"
-        placeholder="텍스트를 입력하세요"
-        value={inputValue}
-        onChange={handleInputChange}
-        className="mt-4"
-      />
+      <img src={MainLogo} alt="mainLogo" className="w-[300px] m-auto" />
       <Button
         type="button"
-        buttonType="multi"
+        color="white"
         className="mt-4"
         onClick={() => alert("test")}
       >
-        test
+        회원가입
       </Button>{" "}
       <Button
         type="submit"
-        buttonType="positive"
+        color="sky"
         className="mt-4"
         onClick={() => alert("test")}
       >
@@ -37,11 +29,11 @@ function Login() {
       </Button>{" "}
       <Button
         type="reset"
-        buttonType="negative"
+        color="kakao"
         className="mt-4"
         onClick={() => alert("test")}
       >
-        test
+        카카오 로그인
       </Button>
     </div>
   );
