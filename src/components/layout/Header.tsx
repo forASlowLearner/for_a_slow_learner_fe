@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { UserRound, ChartColumn } from "lucide-react";
-import Logo from "../../assets/images/mainLogo.png";
+import LeaderBoard from "./../../assets/icons/leaderBoard.png"
+import User from "./../../assets/icons/user.png"
+import Logo from "./../../assets/images/mainLogo.png";
 
 interface HeaderProps {
     backgroundWidth?: string;
@@ -21,12 +22,12 @@ const Header = ({ backgroundWidth }: HeaderProps) => {
                  onClick={() => navigate('/')}
             />
             <div className="flex flex-row gap-4">
-                <ChartColumn
-                    className="font-black cursor-pointer"
+                <img src={LeaderBoard}
+                    className={`cursor-pointer`}
                     onClick={() => navigate('/rank')}
                 />
-                <UserRound
-                    className="font-black cursor-pointer"
+                <img src={User}
+                    className={`cursor-pointer`}
                     onClick={() => navigate('/mypage')}
                 />
             </div>

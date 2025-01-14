@@ -46,5 +46,18 @@ export const questions: Question[] = [
         type: "subjective",
         question: "밤하늘에 뜨는 큰 천체는 무엇인가요?",
         answer: "달",
+    },
+    {
+        id: 8,
+        type: "objective",
+        question: "다음 중 뜨거운 성질을 가진 것은 무엇인가요?",
+        options: ["얼음", "불", "물", "나무"],
+        answer: "불",
+    },
+    {
+        id: 9,
+        type: "subjective",
+        question: "하루는 몇 시간으로 이루어져 있나요?",
+        answer: "24",
     }
 ];

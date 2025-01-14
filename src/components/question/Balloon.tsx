@@ -1,5 +1,5 @@
 import React from "react";
-import speakingTurtle from './../../assets/images/speakingTurtle.png';
+import speakingTurtle from "./../../assets/images/speakingTurtle.png";
 
 interface BalloonProps {
     children: React.ReactNode;
@@ -15,14 +15,22 @@ const Balloon = ({ children, color = "bg-[#FDFFDB]", arrowPosition = "center" }:
     };
 
     return (
-        <div className="text-center">
-            <div className={`relative ${color} p-8 rounded-xl shadow-md max-w-sm mt-[100px] mb-[60px]`}>
-            <span
-                className={`absolute bottom-[-8px] ${arrowPositionClass[arrowPosition]} w-4 h-4 ${color} shadow-md rotate-45`}
-            />
+        <div className="text-center relative z-10">
+            {/* 네모난 말풍선 */}
+            <div
+                className={`relative ${color} p-8 rounded-xl shadow-md max-w-sm mt-[100px] mb-[60px] z-20`}
+            >
                 {children}
+                {/* 세모 꼬리 */}
+                <span
+                    className={`absolute ${arrowPositionClass[arrowPosition]} w-4 h-4 ${color} rotate-45`}
+                    style={{
+                        top: "93%"
+                    }}
+                />
             </div>
-            <img src={speakingTurtle} className="w-[200px] m-auto"/>
+            {/* 거북이 이미지 */}
+            <img src={speakingTurtle} className="w-[200px] m-auto z-10 mt-4" />
         </div>
     );
 };

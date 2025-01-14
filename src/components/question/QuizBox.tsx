@@ -7,7 +7,7 @@ interface QuizBoxProps {
 
 const QuizBox = ({ children }: QuizBoxProps) => {
     return (
-        <div className="bg-[#FDFFDB] rounded-md px-8 pt-8 pb-20 relative w-[300px]">
+        <div className="bg-[#FDFFDB] rounded-md px-8 pt-20 pb-24 relative w-[300px]">
             {children}
             <img
                 src={walkingTurtle}
