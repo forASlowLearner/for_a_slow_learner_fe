@@ -17,17 +17,19 @@ const useTest = () => {
     const handleNextQuestion = () => {
         if (userAnswer === currentQuestion.answer) {
             setCorrectAnswers((prev) => [...prev, userAnswer]);
-            setScore(score + 1);
+            setScore((prevScore) => prevScore + 1);
         }
 
         if (currentQuestionIndex < questions.length - 1) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
+            setCurrentQuestionIndex((prevIndex) => prevIndex + 1); // 함수형 업데이트
             setUserAnswer("");
             setIsAnswered(false);
         } else {
             sendResults();
         }
+
     };
+
 
     const handleSubmitAnswer = () => {
         setIsAnswered(true);
@@ -60,6 +62,7 @@ const useTest = () => {
 
     return {
         currentQuestion,
+        currentQuestionIndex,
         userAnswer,
         setUserAnswer,
         isAnswered,
@@ -68,6 +71,7 @@ const useTest = () => {
         score,
         handleAnswerChange,
         handleSubmitAnswer,
+        handleNextQuestion
     };
 };
 
